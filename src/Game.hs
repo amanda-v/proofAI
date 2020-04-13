@@ -66,7 +66,7 @@ play p (Playing grid mark) =
   if Grid.inBounds p then 
     if Grid.isAvailable p grid then
       Right (playMark p mark grid)
-    else
+    else 
       Left Unavailable
   else
     Left OutOfBounds

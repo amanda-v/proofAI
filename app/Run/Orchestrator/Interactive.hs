@@ -7,10 +7,10 @@ import qualified Data.List as List
 import qualified System.Random as Random
 import qualified Text.Read as Read
 
-import qualified XO.AI as AI
-import XO.Game as Game
-import XO.Grid as Grid
-import XO.Mark
+import qualified AI 
+import Game
+import Grid
+import Mark
 
 import Run.Player as Player
 
@@ -177,18 +177,16 @@ firstAvailablePosition = increment . head . Grid.availablePositions
 displayIntro :: String
 displayIntro =
   List.intercalate "\n"
-    [ "Welcome to Tic-tac-toe"
-    , "Play as many games as you want"
-    , "Press Ctrl-C to exit at any time"
+    [ "Welcome to The Board"
+    , "Just For Fun"
+    , "Press Ctrl+C to exit at any time"
     , ""
-    ] 
-
+    ]
 
 displayPosition :: Position -> String
 displayPosition p = show r ++ ", " ++ show c
   where
     (r, c) = increment p
-
 
 displayGrid :: Grid -> String
 displayGrid = displayTiles . Grid.toList

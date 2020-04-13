@@ -3,12 +3,12 @@
 -- This module exports a functon called 'getPositions' that uses a
 -- <https://en.wikipedia.org/wiki/Minimax minimax> algorithm to determine the
 -- best positions to place a mark based on the configuration of a game's grid.
-module Bot.AI (getPositions) where
+module AI (getPositions) where
 
 import Game as Game
 import Grid as Grid
 import Mark as Mark
-import Referee as Referee
+import Referee 
 
 
 type Score = Int
@@ -44,7 +44,7 @@ getPositions game
 --    returned.
 
 maximize :: Mark -> Mark -> Depth -> Grid -> Result
-maximize max min depth grid =
+maximize max min depth grid = 
   case Referee.unsafeDecide grid min of
     Nothing ->
       let

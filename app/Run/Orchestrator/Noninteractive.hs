@@ -1,9 +1,9 @@
-module XO.CLI.Orchestrator.Noninteractive (run) where
+module Run.Orchestrator.Noninteractive (run) where
 
 
-import XO.AI as AI
-import XO.Game as Game
-import XO.Mark
+import AI 
+import Game 
+import Mark
 
 
 run :: Mark -> Int -> IO ()

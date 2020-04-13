@@ -27,7 +27,11 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      AI,
+      Game,
+      Grid,
+      Mark,
+      Referee
   other-modules:
       Paths_proofAI
   hs-source-dirs:
@@ -40,12 +44,19 @@ executable proofAI-exe
   main-is: Main.hs
   other-modules:
       Paths_proofAI
+      Run.Options
+      Run.Orchestrator
+      Run.Orchestrator.Interactive
+      Run.Orchestrator.Noninteractive
+      Run.Player
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , proofAI
+    , optparse-applicative
+    , random
   default-language: Haskell2010
 
 test-suite proofAI-test

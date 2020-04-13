@@ -1,6 +1,6 @@
 -- | Provides the 'unsafeDecide' function that is used to analyse a grid
 -- from the perspective of the last player to place their mark on the grid.
-module XO.Referee
+module Referee
   ( Outcome(..)
   , unsafeDecide
   )

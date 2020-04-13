@@ -6,7 +6,7 @@ module Run.Options
 
 
 import Options.Applicative
-import Run.Mark
+import Mark
 
 import Run.Player
 
